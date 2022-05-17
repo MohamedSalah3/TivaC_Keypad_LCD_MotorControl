@@ -1,0 +1,1139 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.34.0.0
+Copyright (C) 2021 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Mohamed Salah, Freelancer, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.34.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.16
+Assembler:       Armasm.exe V6.16
+Linker/Locator:  ArmLink.exe V6.16
+Library Manager: ArmAr.exe V6.16
+Hex Converter:   FromElf.exe V6.16
+CPU DLL:         SARMCM3.DLL V5.34.0.0
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      lmidk-agdi.dll V???
+Dialog DLL:      TCM.DLL V1.48.0.0
+ 
+<h2>Project:</h2>
+E:\ARM\Git_lcd\LCD.uvprojx
+Project File Date:  05/08/2022
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.16', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Rebuild target 'Target 1'
+HAL_ADC.c(85): warning: no previous extern declaration for non-static variable 'ADCBaseAddress' [-Wmissing-variable-declarations]
+const volatile uint32_t * ADCBaseAddress[] = {
+                          ^
+HAL_ADC.c(85): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+const volatile uint32_t * ADCBaseAddress[] = {
+               ^
+HAL_ADC.c(99): warning: implicit conversion loses integer precision: 'int' to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+                uint8_t moduleBit = 0x1 << ((uint8_t)module);
+                        ~~~~~~~~~   ~~~~^~~~~~~~~~~~~~~~~~~~
+HAL_ADC.c(101): warning: 6 enumeration values not explicitly handled in switch: 'AIN2', 'AIN4', 'AIN6'... [-Wswitch-enum]
+                switch (channel) {
+                        ^
+HAL_ADC.c(146): warning: cast from 'const volatile unsigned int *' to 'volatile ADCRegs_t *' drops const qualifier [-Wcast-qual]
+                volatile ADCRegs_t* adc = (volatile ADCRegs_t*)ADCBaseAddress[module];
+                                                               ^
+HAL_ADC.c(149): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                adc->ACTSS &= ~0x08;
+                           ~~ ^~~~~
+HAL_ADC.c(152): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                adc->EMUX &= ~0xF000;
+                          ~~ ^~~~~~~
+HAL_ADC.c(136): warning: 'break' will never be executed [-Wunreachable-code-break]
+                                break;
+                                ^~~~~
+HAL_ADC.c(173): warning: cast from 'const volatile unsigned int *' to 'volatile ADCRegs_t *' drops const qualifier [-Wcast-qual]
+        volatile ADCRegs_t* adc = (volatile ADCRegs_t*)ADCBaseAddress[module];
+                                                       ^
+HAL_ADC.c(188): warning: no newline at end of file [-Wnewline-eof]
+}
+ ^
+9 warnings generated.
+compiling HAL_ADC.c...
+HAL_NVIC.c(9): warning: incompatible pointer types initializing 'volatile uint32_t *' (aka 'volatile unsigned int *') with an expression of type 'volatile unsigned long *' [-Wincompatible-pointer-types]
+        volatile uint32_t *address =    (&NVIC_PRI0_R + offset);  
+                           ^            ~~~~~~~~~~~~~~~~~~~~~~~
+HAL_NVIC.c(28): warning: incompatible pointer types initializing 'volatile uint32_t *' (aka 'volatile unsigned int *') with an expression of type 'volatile unsigned long *' [-Wincompatible-pointer-types]
+        volatile uint32_t *address =    (&NVIC_EN0_R + offset);  
+                           ^            ~~~~~~~~~~~~~~~~~~~~~~
+HAL_NVIC.c(40): warning: incompatible pointer types initializing 'volatile uint32_t *' (aka 'volatile unsigned int *') with an expression of type 'volatile unsigned long *' [-Wincompatible-pointer-types]
+        volatile uint32_t *address =    (&NVIC_DIS0_R + offset);  
+                           ^            ~~~~~~~~~~~~~~~~~~~~~~~
+HAL_NVIC.c(46): warning: no newline at end of file [-Wnewline-eof]
+}
+ ^
+4 warnings generated.
+compiling HAL_NVIC.c...
+HAL_PWM.c(110): warning: no previous extern declaration for non-static variable 'PWMBaseAddress' [-Wmissing-variable-declarations]
+const volatile uint32_t * PWMBaseAddress[] = {
+                          ^
+HAL_PWM.c(110): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+const volatile uint32_t * PWMBaseAddress[] = {
+               ^
+HAL_PWM.c(126): warning: cast from 'const volatile unsigned int *' to 'volatile PWMRegs_t *' drops const qualifier [-Wcast-qual]
+        volatile PWMRegs_t* pwm = (volatile PWMRegs_t*)PWMBaseAddress[module];
+                                                       ^
+HAL_PWM.c(134): warning: 6 enumeration values not explicitly handled in switch: 'PWM0', 'PWM1', 'PWM2'... [-Wswitch-enum]
+                        switch (channel) {
+                                ^
+HAL_PWM.c(193): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                        };
+                         ^
+HAL_PWM.c(202): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        };
+         ^
+HAL_PWM.c(200): warning: 'break' will never be executed [-Wunreachable-code-break]
+                        break;
+                        ^~~~~
+HAL_PWM.c(191): warning: 'break' will never be executed [-Wunreachable-code-break]
+                                        break;
+                                        ^~~~~
+HAL_PWM.c(215): warning: cast from 'const volatile unsigned int *' to 'volatile PWMRegs_t *' drops const qualifier [-Wcast-qual]
+        volatile PWMRegs_t* pwm = (volatile PWMRegs_t*)PWMBaseAddress[module];
+                                                       ^
+HAL_PWM.c(221): warning: 6 enumeration values not explicitly handled in switch: 'PWM0', 'PWM1', 'PWM2'... [-Wswitch-enum]
+                        switch (channel) {
+                                ^
+HAL_PWM.c(217): warning: enumeration value 'PWMModule1' not explicitly handled in switch [-Wswitch-enum]
+        switch (module) {
+                ^
+HAL_PWM.c(246): warning: no newline at end of file [-Wnewline-eof]
+}
+ ^
+HAL_PWM.c(244): warning: 'break' will never be executed [-Wunreachable-code-break]
+                        break;
+                        ^~~~~
+HAL_PWM.c(236): warning: 'break' will never be executed [-Wunreachable-code-break]
+                                        break;
+                                        ^~~~~
+13 warnings generated.
+compiling HAL_PWM.c...
+HAL_Timer.c(51): warning: no previous extern declaration for non-static variable 'TimerBaseAddress' [-Wmissing-variable-declarations]
+const volatile uint32_t * TimerBaseAddress[] = {
+                          ^
+HAL_Timer.c(51): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+const volatile uint32_t * TimerBaseAddress[] = {
+               ^
+HAL_Timer.c(76): warning: cast from 'const volatile unsigned int *' to 'volatile TimerRegs_t *' drops const qualifier [-Wcast-qual]
+        volatile TimerRegs_t* timer = (volatile TimerRegs_t*)TimerBaseAddress[block];
+                                                             ^
+HAL_Timer.c(88): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        while (!(SYSCTL_PRTIMER_R & clockBit)) {};
+                                                 ^
+HAL_Timer.c(111): warning: enumeration values 'TIMER3', 'TIMER4', and 'TIMER5' not explicitly handled in switch [-Wswitch-enum]
+        switch (block) {
+                ^
+HAL_Timer.c(146): warning: 'return' will never be executed [-Wunreachable-code-return]
+                        return -1;
+                                ^
+HAL_Timer.c(163): warning: 4 enumeration values not explicitly handled in switch: 'TIMER0', 'TIMER3', 'TIMER4'... [-Wswitch-enum]
+        switch (block) {
+                ^
+HAL_Timer.c(178): warning: 'return' will never be executed [-Wunreachable-code-return]
+                        return -1;
+                                ^
+HAL_Timer.c(193): warning: cast from 'const volatile unsigned int *' to 'volatile TimerRegs_t *' drops const qualifier [-Wcast-qual]
+        volatile TimerRegs_t* timer = (volatile TimerRegs_t*)TimerBaseAddress[block];
+                                                             ^
+HAL_Timer.c(223): warning: cast from 'const volatile unsigned int *' to 'volatile TimerRegs_t *' drops const qualifier [-Wcast-qual]
+        volatile TimerRegs_t* timer = (volatile TimerRegs_t*)TimerBaseAddress[block];
+                                                             ^
+HAL_Timer.c(240): warning: implicit conversion changes signedness: 'volatile uint32_t' (aka 'volatile unsigned int') to 'int' [-Wsign-conversion]
+                readback = timer->ICR;
+                         ~ ~~~~~~~^~~
+HAL_Timer.c(252): warning: implicit conversion changes signedness: 'volatile uint32_t' (aka 'volatile unsigned int') to 'int' [-Wsign-conversion]
+                readback = timer->ICR;
+                         ~ ~~~~~~~^~~
+HAL_Timer.c(260): warning: cast from 'const volatile unsigned int *' to 'volatile TimerRegs_t *' drops const qualifier [-Wcast-qual]
+        volatile TimerRegs_t* timer = (volatile TimerRegs_t*)TimerBaseAddress[TIMER0];
+                                                             ^
+HAL_Timer.c(258): warning: no previous prototype for function 'Timer_Timer0Handler' [-Wmissing-prototypes]
+void Timer_Timer0Handler(void)
+     ^
+HAL_Timer.c(258): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void Timer_Timer0Handler(void)
+^
+static 
+HAL_Timer.c(267): warning: cast from 'const volatile unsigned int *' to 'volatile TimerRegs_t *' drops const qualifier [-Wcast-qual]
+        volatile TimerRegs_t* timer = (volatile TimerRegs_t*)TimerBaseAddress[TIMER1];
+                                                             ^
+HAL_Timer.c(265): warning: no previous prototype for function 'Timer_Timer1Handler' [-Wmissing-prototypes]
+void Timer_Timer1Handler(void)
+     ^
+HAL_Timer.c(265): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void Timer_Timer1Handler(void)
+^
+static 
+HAL_Timer.c(274): warning: cast from 'const volatile unsigned int *' to 'volatile TimerRegs_t *' drops const qualifier [-Wcast-qual]
+        volatile TimerRegs_t* timer = (volatile TimerRegs_t*)TimerBaseAddress[TIMER2];
+                                                             ^
+HAL_Timer.c(276): warning: no newline at end of file [-Wnewline-eof]
+}
+ ^
+HAL_Timer.c(272): warning: no previous prototype for function 'Timer_Timer2Handler' [-Wmissing-prototypes]
+void Timer_Timer2Handler(void)
+     ^
+HAL_Timer.c(272): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void Timer_Timer2Handler(void)
+^
+static 
+18 warnings generated.
+compiling HAL_Timer.c...
+HAL_SPI.c(30): warning: no previous extern declaration for non-static variable 'SSIBaseAddress' [-Wmissing-variable-declarations]
+const volatile uint32_t * SSIBaseAddress[] = {
+                          ^
+HAL_SPI.c(30): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+const volatile uint32_t * SSIBaseAddress[] = {
+               ^
+HAL_SPI.c(52): warning: cast from 'const volatile unsigned int *' to 'volatile SSIRegs_t *' drops const qualifier [-Wcast-qual]
+        volatile SSIRegs_t* ssi = (volatile SSIRegs_t*)SSIBaseAddress[module];
+                                                       ^
+HAL_SPI.c(54): warning: enumeration values 'SSI2' and 'SSI3' not explicitly handled in switch [-Wswitch-enum]
+        switch (module) {
+                ^
+HAL_SPI.c(70): warning: implicit conversion loses integer precision: 'int' to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+        uint8_t moduleBit = 0x1 << ((uint8_t)module);
+                ~~~~~~~~~   ~~~~^~~~~~~~~~~~~~~~~~~~
+HAL_SPI.c(105): warning: cast from 'const volatile unsigned int *' to 'volatile SSIRegs_t *' drops const qualifier [-Wcast-qual]
+        volatile SSIRegs_t* ssi = (volatile SSIRegs_t*)SSIBaseAddress[module];
+                                                       ^
+HAL_SPI.c(116): warning: no newline at end of file [-Wnewline-eof]
+}
+ ^
+6 warnings generated.
+compiling HAL_SPI.c...
+HAL_SysTick.c(25): warning: implicit conversion turns floating-point number into integer: 'double' to 'uint32_t' (aka 'unsigned int') [-Wfloat-conversion]
+        NumTicksPer10ms = busClockFreq * 0.01;
+                        ~ ~~~~~~~~~~~~~^~~~~~
+HAL_SysTick.c(28): warning: implicit conversion turns floating-point number into integer: 'double' to 'uint32_t' (aka 'unsigned int') [-Wfloat-conversion]
+        NumTicksPer10us = busClockFreq * 0.00001;
+                        ~ ~~~~~~~~~~~~~^~~~~~~~~
+2 warnings generated.
+compiling HAL_SysTick.c...
+HAL_GPIO.c(71): warning: incompatible pointer types initializing 'const volatile uint32_t *' (aka 'const volatile unsigned int *') with an expression of type 'const volatile unsigned long *' [-Wincompatible-pointer-types]
+        const volatile uint32_t * baseAddress = GPIOBaseAddress[pinDef->port];
+                                  ^             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HAL_GPIO.c(78): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        return (volatile uint32_t *)(0x42000000 + (32*dataAddress) + (4*pinNumber));
+                                                                   ~  ~^~~~~~~~~~
+HAL_GPIO.c(113): warning: cast from 'const volatile unsigned long *' to 'volatile GPIORegs_t *' drops const qualifier [-Wcast-qual]
+        volatile GPIORegs_t* gpio = (volatile GPIORegs_t*)GPIOBaseAddress[port];
+                                                          ^
+HAL_GPIO.c(140): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        };
+         ^
+HAL_GPIO.c(158): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        };
+         ^
+HAL_GPIO.c(177): warning: cast from 'const volatile unsigned long *' to 'volatile GPIORegs_t *' drops const qualifier [-Wcast-qual]
+        volatile GPIORegs_t* gpio = (volatile GPIORegs_t*)GPIOBaseAddress[port];
+                                                          ^
+HAL_GPIO.c(207): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        };
+         ^
+HAL_GPIO.c(225): warning: cast from 'const volatile unsigned long *' to 'volatile GPIORegs_t *' drops const qualifier [-Wcast-qual]
+        volatile GPIORegs_t* gpio = (volatile GPIORegs_t*)GPIOBaseAddress[port];
+                                                          ^
+HAL_GPIO.c(238): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                        pctlValue |= (ctl << (4*i));
+                                  ~~  ~~~~^~~~~~~~
+HAL_GPIO.c(256): warning: cast from 'const volatile unsigned long *' to 'volatile GPIORegs_t *' drops const qualifier [-Wcast-qual]
+        volatile GPIORegs_t* gpio = (volatile GPIORegs_t*)GPIOBaseAddress[port];
+                                                          ^
+HAL_GPIO.c(274): warning: cast from 'const volatile unsigned long *' to 'volatile GPIORegs_t *' drops const qualifier [-Wcast-qual]
+        volatile GPIORegs_t* gpio = (volatile GPIORegs_t*)GPIOBaseAddress[pinDef->port];
+                                                          ^
+HAL_GPIO.c(276): warning: enumeration value 'INT_TRIGGER_NONE' not explicitly handled in switch [-Wswitch-enum]
+        switch (trigger) {
+                ^
+HAL_GPIO.c(316): warning: 5 enumeration values not explicitly handled in switch: 'PORTA', 'PORTB', 'PORTC'... [-Wswitch-enum]
+        switch (pinDef->port) {
+                ^
+HAL_GPIO.c(353): warning: implicit conversion changes signedness: 'volatile uint32_t' (aka 'volatile unsigned int') to 'int' [-Wsign-conversion]
+        readback = gpio->ICR;
+                 ~ ~~~~~~^~~
+HAL_GPIO.c(362): warning: cast from 'const volatile unsigned long *' to 'volatile GPIORegs_t *' drops const qualifier [-Wcast-qual]
+        volatile GPIORegs_t* gpio = (volatile GPIORegs_t*)GPIOBaseAddress[PORTF];
+                                                          ^
+HAL_GPIO.c(360): warning: no previous prototype for function 'GPIO_PortFHandler' [-Wmissing-prototypes]
+void GPIO_PortFHandler(void)
+     ^
+HAL_GPIO.c(360): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void GPIO_PortFHandler(void)
+^
+static 
+16 warnings generated.
+compiling HAL_GPIO.c...
+HAL_Flash.c(49): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                FLASH_FMA_R |= ((uint32_t)FLASH_BASE_ADDR) + (i*1024);
+                                                           ~  ~^~~~~
+HAL_Flash.c(52): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                FLASH_FMC_R = (flashKey_ << 16) | 0x2; 
+                            ~ ~~~~~~~~~~~~~~~~~~^~~~~
+HAL_Flash.c(78): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        int blockCount = ((wordCount * sizeof(uint32_t)) / 1024) + 1;
+                           ^~~~~~~~~ ~
+HAL_Flash.c(85): warning: cast from 'const void *' to 'volatile unsigned int *' drops const qualifier [-Wcast-qual]
+                FLASH_FMD_R = ((volatile uint32_t*)data)[i];
+                                                   ^
+HAL_Flash.c(89): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                FLASH_FMA_R |= (uint32_t)FLASH_BASE_ADDR + (i * sizeof(uint32_t));
+                                                            ^ ~
+HAL_Flash.c(92): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                FLASH_FMC_R = (flashKey_ << 16) | 0x1; 
+                            ~ ~~~~~~~~~~~~~~~~~~^~~~~
+HAL_Flash.c(116): warning: no newline at end of file [-Wnewline-eof]
+}
+ ^
+7 warnings generated.
+compiling HAL_Flash.c...
+HAL_PLL.c(23): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+        SYSCTL_RCC_R = ((SYSCTL_RCC_R & ~SYSCTL_RCC_XTAL_M) | SYSCTL_RCC_XTAL_16MHZ);
+                                      ~ ^~~~~~~~~~~~~~~~~~
+HAL_PLL.c(26): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+        SYSCTL_RCC2_R &= ~SYSCTL_RCC2_OSCSRC2_M;
+                      ~~ ^~~~~~~~~~~~~~~~~~~~~~
+HAL_PLL.c(29): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+        SYSCTL_RCC2_R &= ~SYSCTL_RCC2_PWRDN2;
+                      ~~ ^~~~~~~~~~~~~~~~~~~
+HAL_PLL.c(35): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+        SYSCTL_RCC2_R = (SYSCTL_RCC2_R & ~(SYSCTL_RCC2_SYSDIV2_M | SYSCTL_RCC2_SYSDIV2LSB)) | (0x4 << 22);  
+                                       ~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+HAL_PLL.c(43): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+        SYSCTL_RCC2_R &= ~SYSCTL_RCC2_BYPASS2;
+                      ~~ ^~~~~~~~~~~~~~~~~~~~
+5 warnings generated.
+compiling HAL_PLL.c...
+compiling Switch5Positions.c...
+main.c(2): warning: In file included from...
+./LCD.h(3): warning: In file included from...
+./LCD_Raw.h(49): warning: padding struct 'LCDRawDisplay_t' with 3 bytes to align 'dataPinAddresses' [-Wpadded]
+        volatile uint32_t* dataPinAddresses[8];
+                           ^
+main.c(3): warning: In file included from...
+./Strings.h(11): warning: incompatible redeclaration of library function 'strlen' [-Wincompatible-library-redeclaration]
+int strlen(const char* s);
+    ^
+./Strings.h(11): note: 'strlen' is a builtin with type 'unsigned int (const char *)'
+./Strings.h(14): warning: incompatible redeclaration of library function 'strncpy' [-Wincompatible-library-redeclaration]
+char* strncpy(char *dst, const char *src, int n);
+      ^
+./Strings.h(14): note: 'strncpy' is a builtin with type 'char *(char *, const char *, unsigned int)'
+./Strings.h(17): warning: incompatible redeclaration of library function 'isspace' [-Wincompatible-library-redeclaration]
+int isspace(char c);
+    ^
+./Strings.h(17): note: 'isspace' is a builtin with type 'int (int)'
+./Strings.h(20): warning: incompatible redeclaration of library function 'isdigit' [-Wincompatible-library-redeclaration]
+int isdigit(char c);
+    ^
+./Strings.h(20): note: 'isdigit' is a builtin with type 'int (int)'
+main.c(4): warning: In file included from...
+./Keypad.h(6): warning: In file included from...
+./UART.h(6): warning: In file included from...
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123\TM4C123.h(98): warning: In file included from...
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(298): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(338): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(357): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(713): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(729): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(774): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(779): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(872): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(885): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(892): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(897): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(904): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(910): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(917): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(924): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(929): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(936): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(942): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(949): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(956): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(961): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(968): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(974): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(981): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(988): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(993): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1000): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1006): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1013): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1020): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1025): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1032): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1038): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1045): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1052): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1057): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1064): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1070): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1077): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1084): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1089): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1096): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1102): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1251): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+main.c(37): warning: no previous prototype for function 'ErrHandler' [-Wmissing-prototypes]
+void ErrHandler(void)
+     ^
+main.c(37): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void ErrHandler(void)
+^
+static 
+main.c(38): warning: function 'ErrHandler' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+{
+^
+main.c(72): warning: multiple unsequenced modifications to 'marqueeCounter' [-Wunsequenced]
+        marqueeCounter = (++marqueeCounter) % 3;
+                       ~  ^
+main.c(119): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+  TIMER0_TAILR_R = 16000 * ttime - 1;    //Timer A interval load value register
+                 ~ ~~~~~~~~~~~~~~^~~
+main.c(109): warning: no previous prototype for function 'timer0A_delayMs' [-Wmissing-prototypes]
+void timer0A_delayMs(int ttime) {
+     ^
+main.c(109): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void timer0A_delayMs(int ttime) {
+^
+static 
+main.c(182): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                 GPIO_PORTA_DATA_R &=~(1<<3);
+                                   ~~^~~~~~~
+main.c(193): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+                 GPIO_PORTA_DATA_R &=~(1<<2);
+                                   ~~^~~~~~~
+main.c(205): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+GPIO_PORTF_PCTL_R &= ~0x00000F00; /*set PF2 as output pin */
+                  ~~ ^~~~~~~~~~~
+main.c(211): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+    PWM1_3_CTL_R &= ~(1<<0);   /* Disable Generator 3 counter */
+                 ~~ ^~~~~~~
+main.c(213): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+        PWM1_3_CTL_R &= ~(1<<1);   /* select down count mode of counter 3*/
+                     ~~ ^~~~~~~
+main.c(248): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+    GPIO_PORTF_DIR_R &= ~(1<<4);  /* Set PF4 and PF0 as a digital input pins */
+                     ~~ ^~~~~~~
+main.c(254): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+    GPIO_PORTF_IS_R  &= ~(1<<4);        /* make bit 4, 0 edge sensitive */
+                     ~~ ^~~~~~~
+main.c(255): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+    GPIO_PORTF_IBE_R &=~(1<<4);         /* trigger is controlled by IEV */
+                     ~~^~~~~~~
+main.c(256): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+    GPIO_PORTF_IEV_R &= ~(1<<4);        /* falling edge trigger */
+                     ~~ ^~~~~~~
+main.c(290): warning: passing 'volatile uint8_t [5]' to parameter of type 'char *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+                itoa(count_pwm/12,RPM);         
+                                  ^~~
+./Strings.h(5): note: passing argument to parameter 's' here
+void itoa(int n, char s[]);
+                      ^
+main.c(292): warning: passing 'volatile uint8_t [5]' to parameter of type 'const char *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+          LCD_PutString(&display2_,RPM, 1, 12);
+                                   ^~~
+./LCD.h(33): note: passing argument to parameter 's' here
+void LCD_PutString(LCDDisplay_t* display, const char* s, int row, int column);
+                                                      ^
+main.c(303): warning: incompatible pointer types passing 'LCDDisplay_t *' to parameter of type 'LCDRawDisplay_t *' [-Wincompatible-pointer-types]
+        LCD_RawClearDisplay(&display2_);
+                            ^~~~~~~~~~
+./LCD_Raw.h(60): note: passing argument to parameter 'display' here
+void LCD_RawClearDisplay(LCDRawDisplay_t* display);
+                                          ^
+main.c(353): warning: implicit conversion changes signedness: 'uint32_t' (aka 'unsigned int') to 'int' [-Wsign-conversion]
+        itoa(Required_speed,arr_2);
+        ~~~~ ^~~~~~~~~~~~~~
+main.c(370): warning: passing 'volatile uint8_t [5]' to parameter of type 'char *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+                itoa(Required_speed-1,arr);
+                                      ^~~
+./Strings.h(5): note: passing argument to parameter 's' here
+void itoa(int n, char s[]);
+                      ^
+main.c(370): warning: implicit conversion changes signedness: 'unsigned int' to 'int' [-Wsign-conversion]
+                itoa(Required_speed-1,arr);
+                ~~~~ ~~~~~~~~~~~~~~^~
+main.c(371): warning: passing 'volatile uint8_t [5]' to parameter of type 'const char *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+                LCD_PutString(&display2_,arr,1,6);
+                                         ^~~
+./LCD.h(33): note: passing argument to parameter 's' here
+void LCD_PutString(LCDDisplay_t* display, const char* s, int row, int column);
+                                                      ^
+70 warnings generated.
+compiling main.c...
+LCD.c(1): warning: In file included from...
+./LCD.h(3): warning: In file included from...
+./LCD_Raw.h(49): warning: padding struct 'LCDRawDisplay_t' with 3 bytes to align 'dataPinAddresses' [-Wpadded]
+        volatile uint32_t* dataPinAddresses[8];
+                           ^
+LCD.c(2): warning: In file included from...
+./Strings.h(11): warning: incompatible redeclaration of library function 'strlen' [-Wincompatible-library-redeclaration]
+int strlen(const char* s);
+    ^
+./Strings.h(11): note: 'strlen' is a builtin with type 'unsigned int (const char *)'
+./Strings.h(14): warning: incompatible redeclaration of library function 'strncpy' [-Wincompatible-library-redeclaration]
+char* strncpy(char *dst, const char *src, int n);
+      ^
+./Strings.h(14): note: 'strncpy' is a builtin with type 'char *(char *, const char *, unsigned int)'
+./Strings.h(17): warning: incompatible redeclaration of library function 'isspace' [-Wincompatible-library-redeclaration]
+int isspace(char c);
+    ^
+./Strings.h(17): note: 'isspace' is a builtin with type 'int (int)'
+./Strings.h(20): warning: incompatible redeclaration of library function 'isdigit' [-Wincompatible-library-redeclaration]
+int isdigit(char c);
+    ^
+./Strings.h(20): note: 'isdigit' is a builtin with type 'int (int)'
+5 warnings generated.
+compiling LCD.c...
+LCD_Raw.c(3): warning: In file included from...
+./Strings.h(11): warning: incompatible redeclaration of library function 'strlen' [-Wincompatible-library-redeclaration]
+int strlen(const char* s);
+    ^
+./Strings.h(11): note: 'strlen' is a builtin with type 'unsigned int (const char *)'
+./Strings.h(14): warning: incompatible redeclaration of library function 'strncpy' [-Wincompatible-library-redeclaration]
+char* strncpy(char *dst, const char *src, int n);
+      ^
+./Strings.h(14): note: 'strncpy' is a builtin with type 'char *(char *, const char *, unsigned int)'
+./Strings.h(17): warning: incompatible redeclaration of library function 'isspace' [-Wincompatible-library-redeclaration]
+int isspace(char c);
+    ^
+./Strings.h(17): note: 'isspace' is a builtin with type 'int (int)'
+./Strings.h(20): warning: incompatible redeclaration of library function 'isdigit' [-Wincompatible-library-redeclaration]
+int isdigit(char c);
+    ^
+./Strings.h(20): note: 'isdigit' is a builtin with type 'int (int)'
+LCD_Raw.c(75): warning: implicit conversion loses integer precision: 'int' to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+                Transfer(display, value << 4, isData);
+                ~~~~~~~~          ~~~~~~^~~~
+LCD_Raw.c(2): warning: In file included from...
+./LCD_Raw.h(49): warning: padding struct 'LCDRawDisplay_t' with 3 bytes to align 'dataPinAddresses' [-Wpadded]
+        volatile uint32_t* dataPinAddresses[8];
+                           ^
+6 warnings generated.
+compiling LCD_Raw.c...
+Strings.c(2): warning: In file included from...
+./Strings.h(11): warning: incompatible redeclaration of library function 'strlen' [-Wincompatible-library-redeclaration]
+int strlen(const char* s);
+    ^
+./Strings.h(11): note: 'strlen' is a builtin with type 'unsigned int (const char *)'
+./Strings.h(14): warning: incompatible redeclaration of library function 'strncpy' [-Wincompatible-library-redeclaration]
+char* strncpy(char *dst, const char *src, int n);
+      ^
+./Strings.h(14): note: 'strncpy' is a builtin with type 'char *(char *, const char *, unsigned int)'
+./Strings.h(17): warning: incompatible redeclaration of library function 'isspace' [-Wincompatible-library-redeclaration]
+int isspace(char c);
+    ^
+./Strings.h(17): note: 'isspace' is a builtin with type 'int (int)'
+./Strings.h(20): warning: incompatible redeclaration of library function 'isdigit' [-Wincompatible-library-redeclaration]
+int isdigit(char c);
+    ^
+./Strings.h(20): note: 'isdigit' is a builtin with type 'int (int)'
+Strings.c(15): warning: implicit conversion changes signedness: 'int' to 'char' [-Wsign-conversion]
+                         s[i++] = n % 10 + '0';   /* get next digit */
+                                ~ ~~~~~~~^~~~~
+5 warnings generated.
+compiling Strings.c...
+Keypad.c(1): warning: In file included from...
+./Keypad.h(5): warning: In file included from...
+./LCD.h(3): warning: In file included from...
+./LCD_Raw.h(49): warning: padding struct 'LCDRawDisplay_t' with 3 bytes to align 'dataPinAddresses' [-Wpadded]
+        volatile uint32_t* dataPinAddresses[8];
+                           ^
+Keypad.c(1): warning: In file included from...
+./Keypad.h(6): warning: In file included from...
+./UART.h(6): warning: In file included from...
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123\TM4C123.h(98): warning: In file included from...
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(298): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(338): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(357): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(713): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(729): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(774): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(779): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(872): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(885): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(892): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(897): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(904): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(910): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(917): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(924): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(929): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(936): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(942): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(949): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(956): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(961): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(968): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(974): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(981): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(988): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(993): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1000): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1006): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1013): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1020): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1025): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1032): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1038): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1045): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1052): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1057): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1064): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1070): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1077): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1084): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1089): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1096): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1102): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1251): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+Keypad.c(1): warning: In file included from...
+./Keypad.h(7): warning: In file included from...
+./Strings.h(11): warning: incompatible redeclaration of library function 'strlen' [-Wincompatible-library-redeclaration]
+int strlen(const char* s);
+    ^
+./Strings.h(11): note: 'strlen' is a builtin with type 'unsigned int (const char *)'
+./Strings.h(14): warning: incompatible redeclaration of library function 'strncpy' [-Wincompatible-library-redeclaration]
+char* strncpy(char *dst, const char *src, int n);
+      ^
+./Strings.h(14): note: 'strncpy' is a builtin with type 'char *(char *, const char *, unsigned int)'
+./Strings.h(17): warning: incompatible redeclaration of library function 'isspace' [-Wincompatible-library-redeclaration]
+int isspace(char c);
+    ^
+./Strings.h(17): note: 'isspace' is a builtin with type 'int (int)'
+./Strings.h(20): warning: incompatible redeclaration of library function 'isdigit' [-Wincompatible-library-redeclaration]
+int isdigit(char c);
+    ^
+./Strings.h(20): note: 'isdigit' is a builtin with type 'int (int)'
+Keypad.c(90): warning: array subscript is of type 'char' [-Wchar-subscripts]
+if (col == 0xE0) return keymap[row][0]; /* key in column 0 */
+                              ^~~~
+Keypad.c(91): warning: array subscript is of type 'char' [-Wchar-subscripts]
+if (col == 0xD0) return keymap[row][1]; /* key in column 1 */
+                              ^~~~
+Keypad.c(92): warning: array subscript is of type 'char' [-Wchar-subscripts]
+if (col == 0xB0) return keymap[row][2]; /* key in column 2 */
+                              ^~~~
+Keypad.c(93): warning: array subscript is of type 'char' [-Wchar-subscripts]
+if (col == 0x70) return keymap[row][3]; /* key in column 3 */
+                              ^~~~
+Keypad.c(7): warning: unused variable 'ARR2' [-Wunused-variable]
+volatile static char ARR2 ={0};
+                     ^
+54 warnings generated.
+compiling Keypad.c...
+UART.c(1): warning: In file included from...
+./UART.h(6): warning: In file included from...
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123\TM4C123.h(98): warning: In file included from...
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(298): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(338): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(357): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(713): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(729): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(774): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(779): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(872): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(885): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(892): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(897): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(904): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(910): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(917): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(924): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(929): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(936): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(942): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(949): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(956): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(961): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(968): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(974): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(981): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(988): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(993): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1000): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1006): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1013): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1020): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1025): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1032): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1038): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1045): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1052): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1057): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1064): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1070): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1077): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1084): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1089): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1096): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1102): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1251): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+UART.c(27): warning: implicit conversion changes signedness: 'volatile uint32_t' (aka 'volatile unsigned int') to 'int' [-Wsign-conversion]
+    data = UART0->DR ;          
+         ~ ~~~~~~~^~
+UART.c(28): warning: implicit conversion changes signedness: 'unsigned int' to 'int' [-Wsign-conversion]
+    return (unsigned int) data; 
+    ~~~~~~ ^~~~~~~~~~~~~~~~~~~
+UART.c(26): warning: while loop has empty body [-Wempty-body]
+          while((UART0->FR & (1<<4)) != 0); 
+                                          ^
+UART.c(26): note: put the semicolon on a separate line to silence this warning
+UART.c(41): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                UART0_Transmitter((str++));
+                ~~~~~~~~~~~~~~~~~  ~~~^~
+48 warnings generated.
+compiling UART.c...
+assembling startup_TM4C123.s...
+RTE/Device/TM4C123GH6PM/system_TM4C123.c(13): warning: In file included from...
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123\TM4C123.h(98): warning: In file included from...
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(298): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(338): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(357): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(713): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(729): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(774): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(779): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(872): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(885): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(892): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(897): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(904): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(910): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(917): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(924): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(929): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(936): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(942): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(949): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(956): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(961): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(968): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(974): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(981): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(988): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(993): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1000): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1006): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1013): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1020): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1025): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1032): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1038): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1045): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1052): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1057): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1064): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1070): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1077): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1084): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1089): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1096): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1102): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/Dell/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1251): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+RTE/Device/TM4C123GH6PM/system_TM4C123.c(576): warning: 'CLOCK_SETUP' is not defined, evaluates to 0 [-Wundef]
+#if(CLOCK_SETUP)
+    ^
+RTE/Device/TM4C123GH6PM/system_TM4C123.c(586): warning: 'CLOCK_SETUP' is not defined, evaluates to 0 [-Wundef]
+#if(CLOCK_SETUP)
+    ^
+46 warnings generated.
+compiling system_TM4C123.c...
+linking...
+Program Size: Code=5092 RO-data=652 RW-data=28 ZI-data=824  
+".\Objects\LCD.axf" - 0 Error(s), 314 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.8.0.pack
+                ARM.CMSIS.5.8.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.5.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.TM4C_DFP.1.1.0.pack
+                Keil.TM4C_DFP.1.1.0
+                Texas Instruments Tiva C Series Device Support and Examples
+   * Component: Startup Version: 1.0.1
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_Target_1
+  C:\Users\Dell\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include
+  C:\Users\Dell\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.5.0
+
+   * Component: Keil::Device:Startup:1.0.1
+      Include file:  Device\Include\TM4C123\TM4C123.h
+      Source file:   Device\Source\ARM\startup_TM4C123.s
+      Source file:   Device\Source\system_TM4C123.c
+Build Time Elapsed:  00:00:07
+</pre>
+</body>
+</html>
